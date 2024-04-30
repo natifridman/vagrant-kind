@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo -n dnf update -y
+# sudo -n dnf update -y
 
 # Install docker
 sudo dnf remove docker \
@@ -33,3 +33,6 @@ sudo mv ./kind /usr/local/bin/kind
 # Create cluster
 sudo kind create cluster
 sudo kind get kubeconfig > kubeconfig
+
+# Install tmate
+sudo dnf install tmate -y
